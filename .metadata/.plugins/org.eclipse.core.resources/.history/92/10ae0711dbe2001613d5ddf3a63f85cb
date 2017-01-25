@@ -1,0 +1,33 @@
+import java.io.IOException;
+import java.lang.Math;
+
+public class RollingDice {
+	public RollingDice(){}
+	
+	public int rol(int n) throws IOException{
+		
+		IllegalArgumentException e = new IllegalArgumentException();
+		if (n < 2 || n > 12){
+			throw e;
+		}
+		
+		int compteur = 0;
+		int scoreFinal;
+		do{
+		int Score1 = (int)(1 + (Math.random() * (6)));
+		int Score2 = (int)(1 + (Math.random() * (6)));
+		scoreFinal = Score1 + Score2;
+		compteur++;
+		print("Score final : "+scoreFinal)
+		}while (ScoreFinal != n);
+		
+		return compteur;
+	}
+	
+	public static void main(String[] args) throws IOException{
+		RollingDice partie = new RollingDice();
+		int resultat = partie.rol(2);
+		System.out.println("Nombre de lancés pour avoir 2 :"+resultat);
+	}
+}
+

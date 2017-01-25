@@ -1,0 +1,2 @@
+INDEX VERSION 1.127+/users/haddab16/Bureau/Java S2/.metadata/.plugins/org.eclipse.jdt.core
+3946416153.index

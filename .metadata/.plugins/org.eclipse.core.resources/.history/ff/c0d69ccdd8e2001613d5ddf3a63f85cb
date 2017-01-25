@@ -1,0 +1,14 @@
+import java.io.IOException;
+import java.math.*;
+
+public class RollingDice {
+	public RollingDice(){}
+	
+	public static int Rol(int n) throws IOException{
+		IllegalArgumentException e = new IllegalArgumentException();
+		if (n < 2 || n > 12){
+			throw e
+		}
+		int Score1 = (int)(1 + (Math.random() * (6 - 1)));
+	}
+}

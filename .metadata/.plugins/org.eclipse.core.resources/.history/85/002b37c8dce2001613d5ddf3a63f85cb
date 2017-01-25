@@ -1,0 +1,11 @@
+
+public class Quiz {
+	int[] nombreGauche = new int[10];
+	int[] nombreDroite = new int[10];
+	int[] reponseUtilis = new int[10];
+	public Quiz(){}
+	
+	public createQuiz(){
+		
+	}
+}

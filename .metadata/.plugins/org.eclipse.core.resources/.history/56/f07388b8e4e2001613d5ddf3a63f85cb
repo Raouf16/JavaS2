@@ -1,0 +1,54 @@
+import java.io.IOException;
+import java.lang.Math;
+import java.util.Scanner;
+
+public class Quiz {
+	int[] nombreGauche = new int[10];
+	int[] nombreDroite = new int[10];
+	int[] reponseUtilis = new int[10];
+	
+	public Quiz(){}
+	
+	public void createQuiz(){
+		for(int i = 0 ; i < 10 ; i++){
+			nombreGauche[i] = (int)(1 + (Math.random() * (100)));
+			nombreDroite[i] = (int)(1 + (Math.random() * (100)));
+		}
+	}
+	
+	public void administerQuiz(){
+		System.out.println("Bonjour, Préparez vous au Quizz !");
+		Scanner sc = new Scanner(System.in);
+		for(int i = 0 ; i < 10 ; i++){
+			System.out.println("Veuillez saisir le résultat de l'addition :");
+			System.out.println(nombreGauche[i]+" + "+nombreDroite[i]+" = ");
+			int nbEntree = sc.nextInt();
+			reponseUtilis[i] = nbEntree;
+		}
+		
+	}
+	
+	public int gradeQuizz(){
+		int score = 0;
+		for(int i = 0 ; i < 10 ; i++){
+			if((nombreGauche[i] + nombreDroite[i]) == reponseUtilis[i]){
+				System.out.println(nombreGauche[i]+" + "+nombreDroite[i]+" = "+reponseUtilis[i]+" Bonne réponse ! :)");
+				score += 10;
+			}
+			else{
+				System.out.println(nombreGauche[i]+" + "+nombreDroite[i]+" = "+reponseUtilis[i]+" Mauvaise réponse ..");
+				System.out.println("La bonne réponse est : "+nombreGauche[i]+" + "+nombreDroite[i]+" = "+(nombreGauche[i]+nombreDroite[i]));
+			}
+		}
+		return score;
+	}
+	
+	public static void main(String[]args){
+		Quiz quiz1 = new Quiz();
+		quiz1.createQuiz();
+		quiz1.administerQuiz();
+		resultat = quiz1.gradeQuizz();
+		
+		
+	}
+}
